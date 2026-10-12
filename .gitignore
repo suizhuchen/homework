@@ -37,3 +37,6 @@ week*/*
 *.out
 *.exe
 a.out
+
+# 压缩包
+*.zip
