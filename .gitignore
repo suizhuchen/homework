@@ -1,17 +1,37 @@
-# 编译产物（无后缀可执行文件）
-week3/3.2
-week4/4.29
-week4/4.30
-week4/4.31
-week4/4.32
-week4/4.33
-week5/5.1
-week5/5.2
-week5/5.3
-week5/5.4
-week5/5.5
+# week 目录下只跟踪带以下后缀的文件，其余（编译产物等）一律自动忽略
+# 以后遇到不上传的新文件类型，把后缀加进来即可，例如 !week*/*.pdf
+week*/*
+!week*/*/
 
-# 通用编译产物
+# 源码
+!week*/*.c
+!week*/*.cc
+!week*/*.cpp
+!week*/*.cxx
+!week*/*.h
+!week*/*.hh
+!week*/*.hpp
+!week*/*.hxx
+
+# 文档/数据
+!week*/*.md
+!week*/*.txt
+!week*/*.pdf
+!week*/*.csv
+!week*/*.in
+!week*/*.dat
+
+# 配置
+!week*/*.json
+!week*/*.jsonc
+!week*/*.yml
+!week*/*.yaml
+!week*/*.toml
+!week*/*.mk
+!week*/*.cmake
+!week*/Makefile
+
+# 即使带后缀也忽略的常见编译产物
 *.o
 *.obj
 *.out
