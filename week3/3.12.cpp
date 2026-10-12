@@ -7,7 +7,6 @@ int main()
     double result = 0.0;
     double min_offset;
     scanf("%lf", &min_offset);
-    // true在moodle上未定义！！！！！
     while (1)
     {
         double current = 1.0 / (1 + i * 2);

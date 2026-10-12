@@ -2,7 +2,7 @@
 
 int main()
 {
-    int sum = 0;
+    float sum = 0;
     int counter = 0;
     while (1)
     {
@@ -13,7 +13,7 @@ int main()
         sum += score;
         counter++;
     }
-    printf("平均成绩=%0.1f\n", (float)sum / counter);
+    printf("平均成绩=%0.1f\n", sum / counter);
 
     return 0;
 }

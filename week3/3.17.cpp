@@ -15,8 +15,7 @@ int main()
         // disc可能为极小负数，此时直接置0
         if (fabs(disc) < 1e-6)
             disc = 0;
-        double sqrt_disc = sqrt(disc);
-        double x1 = (-b + sqrt_disc) / (2 * a);
+        double x1 = (-b + sqrt(disc)) / (2 * a);
         if (disc == 0)
         {
             // 相等根
@@ -26,7 +25,7 @@ int main()
         else
         {
             // 不等根
-            double x2 = (-b - sqrt_disc) / (2 * a);
+            double x2 = (-b - sqrt(disc)) / (2 * a);
             printf("%0.4lf\n", x1);
             printf("%0.4lf\n", x2);
         }

@@ -7,7 +7,10 @@ int main()
     scanf("%d%d", &m, &n);
     for (; m < n; m++)
     {
-        result += m % 3 == 0 ? 0 : m;
+        if (m % 3 != 0)
+        {
+            result += m;
+        }
     }
     printf("%d\n", result);
     return 0;
