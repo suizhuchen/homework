@@ -1,0 +1,19 @@
+# 编译产物（无后缀可执行文件）
+week3/3.2
+week4/4.29
+week4/4.30
+week4/4.31
+week4/4.32
+week4/4.33
+week5/5.1
+week5/5.2
+week5/5.3
+week5/5.4
+week5/5.5
+
+# 通用编译产物
+*.o
+*.obj
+*.out
+*.exe
+a.out

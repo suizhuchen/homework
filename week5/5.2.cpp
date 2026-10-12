@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, min;
+    scanf("%d", &n);
+    scanf("%d", &min);
+
+    for (int i = 1; i < n; i++)
+    {
+        int x;
+        scanf("%d", &x);
+        if (min > x)
+        {
+            min = x;
+        }
+    }
+    printf("min=%d\n", min);
+    return 0;
+}
