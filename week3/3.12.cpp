@@ -2,20 +2,20 @@
 
 int main()
 {
-    int i = 0;
-    int f = 1;
-    double result = 0.0;
-    double min_offset;
-    scanf("%lf", &min_offset);
-    while (1)
+    float e, pi = 0;
+    int flag = 1;
+    scanf("%f", &e);
+
+    for (int i = 0;; i++)
     {
-        double current = 1.0 / (1 + i * 2);
-        if (current < min_offset)
+        float s = 1.0 / (1 + 2 * i);
+        if (s < e)
             break;
-        result += f * current;
-        f = -f;
-        i++;
+        pi += s * flag;
+        flag = -flag;
     }
-    printf("%0.5f\n", result * 4);
+
+    printf("%0.5f\n", pi * 4);
+
     return 0;
 }
