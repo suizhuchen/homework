@@ -4,13 +4,13 @@ int main(){
 	char x;
 	scanf("%c",&x);
 	if (x>='0' && x<='9'){
-		printf("Êý×Ö×Ö·û\n");
+		printf("æ•°å­—å­—ç¬¦\n");
 	} else if (x>='A' && x<='Z'){
-		printf("´óÐ´×ÖÄ¸\n");
+		printf("å¤§å†™å­—æ¯\n");
 	} else if (x>='a' && x<='z'){
-		printf("Ð¡Ð´×ÖÄ¸\n");
+		printf("å°å†™å­—æ¯\n");
 	} else{
-		printf("ÆäËû×Ö·û\n");
+		printf("å…¶ä»–å­—ç¬¦\n");
 	}
 	return 0;
 }

@@ -17,7 +17,7 @@ int main(){
 			printf("<60\n");
 			break; 
 		default:
-			printf("ÊäÈë´íÎó\n");
+			printf("è¾“å…¥é”™è¯¯\n");
 			break; 
 	}
 	return 0;

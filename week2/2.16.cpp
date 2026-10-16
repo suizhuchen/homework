@@ -5,7 +5,7 @@ int main(void) {
     scanf("%d",&score);
 
     if (score < 0 || score > 100) {
-        printf("³É¼¨´íÎó\n");
+        printf("æˆç»©é”™è¯¯\n");
     } else {
         switch (score / 10) {
             case 10:

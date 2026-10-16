@@ -6,7 +6,7 @@ int main(){
 	if (score>=60){
 		printf("Congratulation! Pass.\n");
 	} else {
-		printf("Sorry£°Fail.\n");
+		printf("SorryÔºÅFail.\n");
 	}
 	return 0;
 }

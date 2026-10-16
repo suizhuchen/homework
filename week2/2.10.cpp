@@ -4,11 +4,11 @@ int main(){
 	int a,b;
 	scanf("%d%d",&a,&b);
 	if (a>b){
-		printf("A×î´ó\n");
+		printf("Aæœ€å¤§\n");
 	} else if (a<b){
-		printf("B×î´ó\n");
+		printf("Bæœ€å¤§\n");
 	} else {
-		printf("Ò»Ñù´ó\n");
+		printf("ä¸€æ ·å¤§\n");
 	}
 	return 0;
 }

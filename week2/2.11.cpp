@@ -4,11 +4,11 @@ int main(){
 	int t;
 	scanf("%d",&t);
 	if (t<0){
-		printf("��̬\n");
+		printf("固态\n");
 	} else if (t>100){
-		printf("��̬\n");
+		printf("气态\n");
 	} else{
-		printf("Һ̬\n");
+		printf("液态\n");
 	}
 	return 0;
 }

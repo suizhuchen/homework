@@ -3,7 +3,7 @@
 int main(){
 	int x;
 	scanf("%d",&x);
-	// µ¥·ÖÖ§if 
+	// å•åˆ†æ”¯if 
 	if (x<0){
 		x=-x;
 	} 

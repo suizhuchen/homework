@@ -7,6 +7,6 @@ int main()
     scanf("%f,%f",&a,&b);  
     float s=a*a*pi;  
     float c=a*pi*2;  
-    printf("Ãæ»ı=%0.3f\n",2*s+c*b);  
+    printf("é¢ç§¯=%0.3f\n",2*s+c*b);  
     return 0;  
 } 

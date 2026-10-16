@@ -4,9 +4,9 @@ int main(){
 	int x;
 	scanf("%d",&x);
 	if (x<0 || x>100){
-		printf("非法\n");
+		printf("闈炴硶\n");
 	} else {
-		printf("合法\n");
+		printf("鍚堟硶\n");
 	}
 	return 0;
 }

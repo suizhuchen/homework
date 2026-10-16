@@ -3,7 +3,7 @@
 int main(){
 	int x;
 	scanf("%d",&x);
-	// ºÏ¹æÐ´·¨ 
+	// åˆè§„å†™æ³• 
 	switch(x){
 		case 1:
 			printf("January\n");
@@ -42,10 +42,10 @@ int main(){
 			printf("December\n");
 			break;
 		default:
-			printf("ÊäÈë´íÎó\n");
+			printf("è¾“å…¥é”™è¯¯\n");
 			break;
 	}
-	// ¸ü¼ò½àÐ´·¨
+	// æ›´ç®€æ´å†™æ³•
 //	const char *months[]={
 //		"January",
 //		"February",
@@ -63,7 +63,7 @@ int main(){
 //	if (x>0 && x<13){
 //		printf("%s\n",months[x-1]);
 //	} else {
-//		printf("ÊäÈë´íÎó\n");
+//		printf("è¾“å…¥é”™è¯¯\n");
 //	}
 	return 0;
 }

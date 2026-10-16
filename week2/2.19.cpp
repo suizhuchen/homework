@@ -15,10 +15,10 @@ int main(){
 			printf("%d\n",x*y);
 			break;
 		case '/':
-			(y==0)?printf("²»ÄÜ±»0³ı\n"):printf("%d\n",x/y);
+			(y==0)?printf("ä¸èƒ½è¢«0é™¤\n"):printf("%d\n",x/y);
 			break;
 		default:
-			printf("ÔËËã·ûÓĞ´í\n");
+			printf("è¿ç®—ç¬¦æœ‰é”™\n");
 			break;
 	}
 	return 0;
