@@ -11,8 +11,7 @@
 #
 # 说明:
 #   - 归档内保留 weekN/ 目录结构（和已有的 week3.zip 格式一致）
-#   - 只收录源码/文档/配置文件（与 .gitignore 的规则一致）
-#   - 自动排除编译产物（可执行文件、*.o、*.out、*.exe 等）
+#   - 只收录 .cpp 文件，不含 .vscode 等配置和编译产物
 
 set -euo pipefail
 
@@ -42,8 +41,8 @@ mkdir -p "$(dirname "$out")"
 list=$(mktemp)
 trap 'rm -f "$list"' EXIT
 
-# 目录本身也收录（带斜杠表示目录项），解压后能直接看到 weekN/ 目录
-find "$week" -type d | sort | sed 's|$|/|' >> "$list"
+# 只收录 weekN/ 目录本身（带斜杠表示目录项）
+echo "$week/" >> "$list"
 
 n_code=0
 n_skipped=0
@@ -51,14 +50,9 @@ while IFS= read -r f; do
     # 跳过输出文件自身（防止输出路径刚好在 week 目录里）
     [[ $f -ef $out ]] && continue
 
+    # 只打包 .cpp 文件
     case "$f" in
-        # 源码
-        *.c|*.cc|*.cpp|*.cxx|*.h|*.hh|*.hpp|*.hxx) ;;
-        # 文档/数据
-        *.md|*.txt|*.pdf|*.csv|*.in|*.dat) ;;
-        # 配置
-        *.json|*.jsonc|*.yml|*.yaml|*.toml|*.mk|*.cmake|*/Makefile) ;;
-        # 其余一律视为编译产物或其他文件，不打包
+        *.cpp) ;;
         *)
             n_skipped=$((n_skipped + 1))
             continue
@@ -70,7 +64,7 @@ while IFS= read -r f; do
 done < <(find "$week" -type f | sort)
 
 if (( n_code == 0 )); then
-    echo "错误: $week 下没有可打包的代码文件" >&2
+    echo "错误: $week 下没有 .cpp 文件" >&2
     exit 1
 fi
 
@@ -79,7 +73,7 @@ rm -f "$out"
 zip -q "$out" -@ < "$list"
 
 echo "✅ 已生成: $out"
-echo "   收录 $n_code 个文件，跳过 $n_skipped 个编译产物/其他文件"
+echo "   收录 $n_code 个 .cpp 文件，跳过 $n_skipped 个非 .cpp 文件"
 echo
 echo "   归档内容:"
 unzip -l "$out" | tail -n +4 | head -n -2 | awk '{print "     " $4}' | grep -v '^     $'
