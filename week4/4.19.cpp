@@ -47,7 +47,7 @@ int main()
         }
     }
 
-    if (found == 0)
+    if (!found)
     {
         printf("No Output\n");
     }
